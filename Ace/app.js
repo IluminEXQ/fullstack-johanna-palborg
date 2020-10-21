@@ -23,6 +23,6 @@ app.post('/sendMessage', function (req, res) {
 
 app.listen(port, () => console.log(`Example app listening on port port!`))
 
-const module = require("mymodule")
+const modul = require("mymodule")
 
-console.log (module.getName())
+console.log (modul.getName())
