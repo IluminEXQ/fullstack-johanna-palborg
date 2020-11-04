@@ -15,9 +15,25 @@ const messagePostSchema = new mongoose.Schema({
 
 const MessagePost = mongoose.model('Messagepost', messagePostSchema);
 
-let newMessagePost = new MessagePost({
-    name: "Ilumin",
-    message: "Hello! How are you doing?"
-});
+function saveMessage(inName, inMessage){
 
-newMessagePost.save
+    let newMessagePost = new MessagePost({
+        name: inName,
+        message: inMessage
+    });
+
+    newMessagePost.save()
+
+}
+
+exports.saveMessage = function (inName, inMessage){
+
+    let newMessagePost = new MessagePost({
+        name: inName,
+        message: inMessage
+    });
+
+    newMessagePost.save()
+}
+
+

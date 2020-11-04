@@ -1,4 +1,5 @@
 const express = require('express')
+const databaseModule = require('./databasemodule.js')
 const app = express()
 const port = 1337
 
@@ -17,11 +18,15 @@ app.get('/sad', (req, res) => {
 
 app.post('/sendMessage', function (req, res) {
     console.log(req.body.name)
-    console.log(req.body.email)
-  res.redirect('/')
+    console.log(req.body.message)
+    
+   databaseModule.saveMessage(req.body.name, req.body.message)
+
+    res.redirect('/success')
 })
 
 app.listen(port, () => console.log(`Example app listening on port port!`))
+
 
 
 
