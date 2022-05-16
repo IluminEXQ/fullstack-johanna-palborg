@@ -36,4 +36,3 @@ exports.saveMessage = function (inName, inMessage){
     newMessagePost.save()
 }
 
-

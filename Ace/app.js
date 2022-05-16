@@ -12,7 +12,7 @@ app.use(express.static(clientDir))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-  res.render('index.ejs', {name : "Ilumin"})
+  res.render('index.ejs', {name : "Johanna"})
 })
   
   app.post('/sendMessage', function (req, res) {
